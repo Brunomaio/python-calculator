@@ -24,16 +24,25 @@ def divide(x, y):
 
 
 calculating = True
+operations = ['add', 'sum', 'subtract',
+              'subtraction', 'multiply', 'divide', 'mult']
 while calculating:
-    print('- Select operation type:')
+    print('>>> Select operation type:')
     print('---- sum')
     print('---- subtract')
     print('---- multiply')
     print('---- divide')
     print('-- exit program')
     userChoice = input('Waiting for input... ')
-    print(userChoice, 'operation')
-    print('-------------')
+    if userChoice not in operations:
+        print('-----')
+        print('Sorry, the option ', userChoice,
+              'is not available. Try something else.')
+        print('-----')
+        continue
+    print('-----')
+    print('>', userChoice, 'operation')
+    print('-----')
     if userChoice == 'sum' or userChoice == 'add':
         add(input('1st number: '), input('2nd number: '))
     elif userChoice == 'multiply' or userChoice == 'mult':
@@ -44,6 +53,3 @@ while calculating:
         subtract(input('1st number: '), input('2nd number: '))
     elif userChoice == 'exit program' or userChoice == 'exit':
         calculating = False
-    else:
-        print('Sorry, the option ', userChoice, 'is not available')
-        print('-------------')
