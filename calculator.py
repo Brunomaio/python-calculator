@@ -1,5 +1,5 @@
 def presentResults(result):
-    print('-- The result is: ', result)
+    print('-- The result is:', result)
     print('-------------')
 
 
@@ -34,16 +34,16 @@ while calculating:
     userChoice = input('Waiting for input... ')
     print(userChoice, 'operation')
     print('-------------')
-    if userChoice == 'sum':
+    if userChoice == 'sum' or userChoice == 'add':
         add(input('1st number: '), input('2nd number: '))
-        userChoice = ''
-    elif userChoice == 'multiply':
+    elif userChoice == 'multiply' or userChoice == 'mult':
         multiply(input('1st number: '), input('2nd number: '))
     elif userChoice == 'divide':
         divide(input('1st number: '), input('2nd number: '))
-    elif userChoice == 'subtract':
+    elif userChoice == 'subtract' or userChoice == 'subtraction':
         subtract(input('1st number: '), input('2nd number: '))
-    elif userChoice == 'exit program' or 'exit':
+    elif userChoice == 'exit program' or userChoice == 'exit':
         calculating = False
     else:
-        print('Sorry, that option isn`t available:', userChoice)
+        print('Sorry, the option ', userChoice, 'is not available')
+        print('-------------')
